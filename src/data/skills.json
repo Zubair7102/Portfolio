@@ -1,0 +1,62 @@
+[
+  {
+    "name": "C++",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png"
+  },
+  {
+    "name": "HTML",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/512/732/732212.png?w=360"
+  },
+  {
+    "name": "Tailwind CSS",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png"
+  },
+  {
+    "name": "JavaScript",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+  },
+  {
+    "name": "NodeJS",
+    "imageUrl": "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f0b606abb6d19089febc9faeeba5bc05/nodejs-development-services.png"
+  },
+  {
+    "name": "Express.js",
+    "imageUrl": "https://img.icons8.com/fluent/200/express-js.png"
+  },
+  {
+    "name": "MongoDB",
+    "imageUrl": "https://www.opc-router.de/wp-content/uploads/2021/03/mongodb_thumbnail.png"
+  },
+  {
+    "name": "MySQL",
+    "imageUrl": "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-21.png"
+  },
+  {
+    "name": "Bootstrap",
+    "imageUrl": "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png"
+  },
+  {
+    "name": "GitHub Actions",
+    "imageUrl": "https://avatars.githubusercontent.com/u/44036562?s=280&v=4"
+  },
+  {
+    "name": "Figma",
+    "imageUrl": "https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format"
+  },
+  {
+    "name": "Canva",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Canva_logo..png"
+  },
+  {
+    "name": "Dribble",
+    "imageUrl": "https://static.vecteezy.com/system/resources/previews/023/986/870/non_2x/dribbble-logo-dribbble-logo-transparent-dribbble-icon-transparent-free-free-png.png"
+  },
+  {
+    "name": "DSA",
+    "imageUrl": "https://yt3.googleusercontent.com/h0n8phylgeZKuMlGmcPhkOM8rkV1IHTr5oumqZL581iQCSeMeFrnmYB69a69RQAQoVqgxM5ENX8=s900-c-k-c0x00ffffff-no-rj"
+  },
+  {
+    "name": "WordPress",
+    "imageUrl": "https://pngimg.com/d/wordpress_PNG43.png"
+  }
+]
