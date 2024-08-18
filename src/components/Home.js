@@ -25,7 +25,7 @@ const Home = () => {
             </button>
           </Link>
           <a
-            href="https://drive.google.com/file/d/1uTDoGKFBN-D6Ehpi8zeanLAz6_l0zVlV/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1PKArVwb52Z94SbCqjcfeSGYcfDzVwjxv/view?usp=drive_link"
             target="__blank"
           >
             <button className="text-white border-2 px-6 py-3 my-2 ml-4 flex items-center hover:bg-cyan-800 hover:border-cyan-800 group rounded">
