@@ -10,17 +10,18 @@ const Skills = () => {
             Skills
           </p>
         </div>
-        <div className="w-full grid grid-cols-3 sm:grid-cols-5 gap-4 text-center py-8">
+        <div className="w-full grid grid-cols-3 sm:grid-cols-5 gap-6 text-center py-8">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="shadow-md shadow-[#040c16] hover:scale-110 duration-500 flex justify-center items-center rounded-md p-2"
+              className="shadow-lg shadow-[#040c16] hover:scale-105 duration-300 transition-transform flex flex-col justify-center items-center rounded-lg p-4 bg-[#112240] border-2 border-transparent hover:border-cyan-800"
             >
               <img
                 src={skill.imageUrl}
-                className="w-20 mx-auto"
+                className="w-20 mx-auto mb-2"
                 alt={skill.name}
               />
+              <p className="mt-2 text-lg font-semibold">{skill.name}</p>
             </div>
           ))}
         </div>
