@@ -8,17 +8,25 @@
   body {
     @apply font-[raleway];
   }
+  
+  /* Apply this style globally to all unordered and ordered lists */
+  ul, ol {
+    @apply list-none;
+  }
+
+  /* Ensure consistent clickable style for all list items */
   li {
-    @apply px-4;
-    @apply cursor-pointer;
+    @apply px-4 cursor-pointer;
   }
 }
+
 
 .content-div {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 250px;
+  transition: background-image 0.3s ease; /* Smooth transition */
 }
 
 .content-div:hover {
@@ -28,6 +36,7 @@
     hsla(242, 74%, 61%, 0.8)
   ) !important;
 }
+
 
 input,
 textarea,
