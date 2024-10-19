@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
-import zubair from "../assets/zubair.jpg";
+import zubair from "../assets/zubair1.jpg";
 
 const Home = () => {
   const [displayedText, setDisplayedText] = useState("");
