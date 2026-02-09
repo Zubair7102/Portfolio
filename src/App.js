@@ -8,13 +8,16 @@ import Skills from "./components/Skills";
 
 const App = () => {
   return (
-    <div className="bg-[#0a192f]">
+    <div className="min-h-screen bg-gray-900 text-gray-100 selection:bg-cyan-300/30 selection:text-cyan-100">
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_top_right,#22d3ee26,transparent_50%),radial-gradient(circle_at_bottom_left,#a855f726,transparent_50%)]" />
       <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <main className="relative z-10">
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
     </div>
   );
 };

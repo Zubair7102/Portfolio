@@ -1,3 +1,21 @@
-<h1 align="center">Portfolio</h1>
+<h1 align="center">Portfolio Revamp</h1>
 
-motivated Computer Science student with a strong foundation in ReactJS, UI/UX design, and full-stack development. I also have expertise in C++ and Data Structures & Algorithms, allowing me to create efficient, scalable solutions. I am passionate about creating seamless user experiences and web apps by combining technical skills with design, ensuring that each project is both functional and visually appealing. Committed to continuous learning, I am eager to apply my skills to solve real-world challenges and bring innovative ideas to life.
+A modern, responsive developer portfolio built with React + Tailwind CSS.
+
+## Highlights
+- Full UI refresh with glassmorphism-inspired dark theme.
+- Rebuilt sections: Hero, About, Skills, Projects, Contact.
+- Improved mobile navigation and section structure.
+- Better accessibility basics (labels, alt text, form requirements).
+- Cleaner social link payload (removed heavy embedded base64 image).
+
+## Run locally
+```bash
+npm install
+npm start
+```
+
+## Build
+```bash
+npm run build
+```

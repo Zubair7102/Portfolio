@@ -1,96 +1,88 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
+import { FiDownload } from "react-icons/fi";
 import zubair from "../assets/zubair1.jpg";
 
 const Home = () => {
-  const [displayedText, setDisplayedText] = useState("");
-  const [displayedTitle, setDisplayedTitle] = useState("");
-  const [typingComplete, setTypingComplete] = useState(false);
+  const [typedName, setTypedName] = useState("");
+  const [typedRole, setTypedRole] = useState("");
 
   const name = "Mohd Zubair Ahmed";
-  const title = "I'm a Full Stack Web Developer";
-
-  // Function to type text one character at a time
-  const typeText = async (text, setter, delay) => {
-    for (let i = 0; i <= text.length; i++) {
-      setter(text.slice(0, i));
-      await new Promise((resolve) => setTimeout(resolve, delay));
-    }
-  };
+  const role = "Full Stack Developer crafting polished digital products.";
 
   useEffect(() => {
-    const type = async () => {
-      await typeText(name, setDisplayedText, 100);
-      await typeText(title, setDisplayedTitle, 100);
-      setTypingComplete(true);
+    let isMounted = true;
+
+    const typeLine = async (text, setter, delay) => {
+      for (let i = 0; i <= text.length; i += 1) {
+        if (!isMounted) {
+          return;
+        }
+        setter(text.slice(0, i));
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((resolve) => setTimeout(resolve, delay));
+      }
     };
-    type();
+
+    const startTyping = async () => {
+      await typeLine(name, setTypedName, 70);
+      await typeLine(role, setTypedRole, 32);
+    };
+
+    startTyping();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
-    <div name="home" className="bg-[#0a192f] w-full h-screen flex flex-col justify-center items-center relative">
-      {/* Container */}
-      <div className="max-w-[1000px] w-full px-8 flex flex-col justify-center items-start h-full z-10">
-        <p className="font-bold text-cyan-800 text-lg md:text-xl">Hi, my name is</p>
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-[#cfd7f0]">
-          {displayedText}
-          {typingComplete && <span className="animate-blink">|</span>}
-        </h1>
-        <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-[#8892b0] mt-2">
-          {displayedTitle}
-          {typingComplete && <span className="animate-blink">|</span>}
-        </h2>
-        <p className="text-[#8892b0] py-4 max-w-[700px] text-sm md:text-lg">
-          I specialize in building high-quality web applications with modern technologies. Check out my projects or download my resume below!
-        </p>
+    <section id="home" name="home" className="relative flex min-h-screen items-center px-6 pb-16 pt-32 md:px-12">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.4fr_1fr]">
+        <div>
+          <p className="mb-5 inline-flex rounded-full border border-cyan-300/40 bg-cyan-400/10 px-4 py-1 text-sm font-semibold tracking-wide text-cyan-200">
+            Open to internships & freelance collaborations
+          </p>
+          <h1 className="text-4xl font-black leading-tight text-gray-100 sm:text-5xl lg:text-6xl">
+            {typedName}
+            <span className="ml-1 inline-block h-10 w-[3px] animate-pulse bg-cyan-300 align-middle" />
+          </h1>
+          <h2 className="mt-4 max-w-2xl text-lg text-gray-300 sm:text-2xl">{typedRole}</h2>
+          <p className="mt-6 max-w-2xl leading-relaxed text-gray-400">
+            I build performant React experiences with strong UX thinking, clean architecture,
+            and scalable backend integrations.
+          </p>
 
-        {/* Buttons */}
-        <div className="flex flex-col sm:flex-row">
-          <Link to="projects" smooth={true} duration={500}>
-            <button className="text-white border-2 px-6 py-3 my-2 flex items-center hover:bg-cyan-800 hover:border-cyan-800 group rounded transition-all duration-300">
-              View Projects
-              <span className="group-hover:rotate-90 duration-300">
-                <HiArrowNarrowRight className="ml-3" />
-              </span>
-            </button>
-          </Link>
-          <a
-            href="https://drive.google.com/file/d/19dLD-44U3-TPC4WO8ylb5HmGQl6eS_a7/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="text-white border-2 px-6 py-3 my-2 sm:ml-4 flex items-center hover:bg-cyan-800 hover:border-cyan-800 group rounded transition-all duration-300">
-              View Resume
-              <span className="group-hover:rotate-90 duration-300">
-                <HiArrowNarrowRight className="ml-3" />
-              </span>
-            </button>
-          </a>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link to="projects" smooth duration={500}>
+              <button className="group inline-flex items-center gap-3 rounded-xl border border-cyan-300/70 bg-cyan-400/10 px-6 py-3 font-semibold text-cyan-100 transition hover:-translate-y-1 hover:bg-cyan-400/20">
+                Explore Projects
+                <HiArrowNarrowRight className="text-lg transition group-hover:translate-x-1" />
+              </button>
+            </Link>
+            <a
+              href="https://drive.google.com/file/d/19dLD-44U3-TPC4WO8ylb5HmGQl6eS_a7/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl border border-gray-600 px-6 py-3 font-semibold text-gray-200 transition hover:-translate-y-1 hover:border-gray-400"
+            >
+              Resume <FiDownload />
+            </a>
+          </div>
+        </div>
+
+        <div className="relative mx-auto max-w-sm">
+          <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-br from-cyan-300/30 via-violet-300/20 to-fuchsia-300/20 blur-2xl" />
+          <img
+            src={zubair}
+            alt="Mohd Zubair Ahmed"
+            loading="lazy"
+            className="aspect-square w-full rounded-[2rem] border border-white/20 object-cover shadow-2xl shadow-cyan-900/60"
+          />
         </div>
       </div>
-
-      {/* Profile Image */}
-      <div className="hidden md:block absolute right-0 top-56 sm:top-48 lg:top-36 mr-8 z-10">
-        <img
-          src={zubair}
-          alt="Profile"
-          width={280}
-          height={280}
-          loading="lazy"
-          className="rounded-full object-cover border-4 border-[#0a192f] shadow-lg transition-transform duration-500 transform hover:scale-105"
-        />
-      </div>
-      <style jsx>{`
-        @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-        .animate-blink {
-          animation: blink 1s step-start infinite;
-        }
-      `}</style>
-    </div>
+    </section>
   );
 };
 

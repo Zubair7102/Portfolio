@@ -2,47 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 @layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
-    @apply font-[raleway];
-  }
-  
-  /* Apply this style globally to all unordered and ordered lists */
-  ul, ol {
-    @apply list-none;
+    @apply m-0 bg-gray-900 font-[Inter] text-gray-100 antialiased;
   }
 
-  /* Ensure consistent clickable style for all list items */
-  li {
-    @apply px-4 cursor-pointer;
+  ul,
+  ol {
+    @apply m-0 list-none p-0;
+  }
+
+  a {
+    @apply no-underline;
   }
 }
-
-
-.content-div {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 250px;
-  transition: background-image 0.3s ease; /* Smooth transition */
-}
-
-.content-div:hover {
-  background-image: linear-gradient(
-    to right,
-    rgba(112, 157, 255, 0.8),
-    hsla(242, 74%, 61%, 0.8)
-  ) !important;
-}
-
 
 input,
 textarea,
 button,
 select,
-div,
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
