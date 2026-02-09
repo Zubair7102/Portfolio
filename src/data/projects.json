@@ -1,65 +1,41 @@
 [
   {
-    "name": "Shop Cart",
-    "demoUrl": "https://shopcart-iota-two.vercel.app/",
-    "codeUrl": "https://github.com/Zubair7102/shop-app-react-redux",
-    "backgroundImageUrl": "/shopCart.png"
-  },
-  {
-    "name": "Modern Chair",
-    "demoUrl": "https://modern-chairs.vercel.app/",
-    "codeUrl": "https://github.com/Zubair7102/Modern-Chairs",
-    "backgroundImageUrl": "/modernChair.png"
-  },
-  {
-    "name": "Random Meme",
-    "demoUrl": "https://random-gif-beta.vercel.app/",
-    "codeUrl": "https://github.com/Zubair7102/Random-gif",
+    "name": "Algorithm Visualizer",
+    "tagline": "Interactive visual learning platform for sorting and searching algorithms",
+    "techStack": ["React", "JavaScript", "Tailwind CSS"],
+    "highlights": [
+      "Led a team of 2 and improved delivery efficiency by 20%, finishing two weeks early.",
+      "Built step-by-step sorting and searching visualizations with real-time algorithm comparisons.",
+      "Added playback speed controls to let learners customize visualization pace."
+    ],
+    "codeUrl": "https://github.com/Zubair7102/Algo-Visualizer",
+    "demoUrl": "",
     "backgroundImageUrl": "/randomMeme.png"
   },
   {
-    "name": "Text Manager",
-    "demoUrl": "https://textify-manager.netlify.app/",
-    "codeUrl": "https://github.com/Zubair7102/Text-manager",
-    "backgroundImageUrl": "/textManager.png"
+    "name": "StudyNotion",
+    "tagline": "Full-stack edtech platform with secure auth, course management, and payments",
+    "techStack": ["Node.js", "Express.js", "MongoDB", "React.js", "Razorpay"],
+    "highlights": [
+      "Implemented JWT + OTP authentication for secure login/signup flows.",
+      "Built instructor course management with multimedia sections and pricing.",
+      "Integrated Razorpay payments and optimized backend workflows to reduce load times by 30%."
+    ],
+    "codeUrl": "https://github.com/Zubair7102/StudyNotion-Mjr",
+    "demoUrl": "",
+    "backgroundImageUrl": "/shopCart.png"
   },
   {
-    "name": "WeatherApp",
-    "demoUrl": "https://zubair7102.github.io/Weather-App/",
-    "codeUrl": "https://github.com/Zubair7102/Weather-App",
-    "backgroundImageUrl": "/weather.png"
-  },
-  {
-    "name": "RazorPay Clone",
-    "demoUrl": "https://razzorpayclone.netlify.app/",
-    "codeUrl": "https://github.com/Zubair7102/Razorpay-clone",
-    "backgroundImageUrl": "/razorPay.png"
-  },
-  {
-    "name": "Random Pass",
-    "demoUrl": "https://zubair7102.github.io/Random-Pass/",
-    "codeUrl": "https://github.com/Zubair7102/Random-Pass",
-    "backgroundImageUrl": "/randomPass.png"
-  },
-  {
-    "name": "News Express",
-    "demoUrl": "https://news-xpress.netlify.app/",
-    "codeUrl": "https://github.com/Zubair7102/News-Express",
+    "name": "Journal App",
+    "tagline": "Production-style Spring Boot backend with auth, caching, analytics, and cloud deployment",
+    "techStack": ["Spring Boot", "MongoDB", "Redis", "Docker", "Google OAuth"],
+    "highlights": [
+      "Built role-based journaling APIs with JWT auth, OAuth login, and Swagger documentation.",
+      "Integrated sentiment analysis and weather-based greetings with Redis caching.",
+      "Containerized with Docker and deployed with MongoDB Atlas for scalable cloud readiness."
+    ],
+    "codeUrl": "https://github.com/Zubair7102/Journal-App",
+    "demoUrl": "",
     "backgroundImageUrl": "/newsExpress.png"
-  },
-  {
-    "name": "Employee Detail",
-    "codeUrl": "https://github.com/Zubair7102/Employee-Detail-Frontend",
-    "backgroundImageUrl": "/employeeDetail.png"
-  },
-  {
-    "name": "Figma Payment App",
-    "codeUrl": "https://www.figma.com/design/NtDeJA9sbJKWBNaq8WtaSy/payment-app?node-id=0-1&t=3aeK63V1o2eVQhoq-1",
-    "backgroundImageUrl": "/paymentApp.png"
-  },
-  {
-    "name": "Brew House",
-    "codeUrl": "https://www.figma.com/design/iwKUMN23x9Gr3DMGUEAUkW/Brew-House?node-id=1-2&t=PalEbRsMtYmO4j7F-1",
-    "backgroundImageUrl": "/homeDrink.jpg"
   }
 ]
