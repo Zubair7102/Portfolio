@@ -15,7 +15,6 @@ const App = () => {
       <main className="relative z-10">
         <Home />
         <About />
-        <Experience />
         <Skills />
         <Projects />
         <Contact />
