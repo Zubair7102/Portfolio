@@ -3,6 +3,7 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { FiDownload } from "react-icons/fi";
 import zubair from "../assets/zubair1.jpg";
+import resume from "../data/resume.json";
 
 const Home = () => {
   const [typedName, setTypedName] = useState("");

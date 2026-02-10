@@ -10,13 +10,23 @@
     "imageUrl": "https://brandlogos.net/wp-content/uploads/2016/06/linkedin-logo.png"
   },
   {
-    "platform": "GitHub",
-    "profileUrl": "https://github.com/Zubair7102",
-    "imageUrl": "https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg"
-  },
-  {
     "platform": "Figma",
     "profileUrl": "https://www.figma.com/files/team/1303914623939848305/project/123945709?fuid=1160168960922013514",
     "imageUrl": "https://cdn.sanity.io/images/599r6htc/regionalized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format"
+  },
+  {
+    "platform": "Portfolio",
+    "profileUrl": "https://github.com/Zubair7102",
+    "imageUrl": "https://cdn-icons-png.flaticon.com/512/1006/1006771.png"
+  },
+  {
+    "platform": "LeetCode",
+    "profileUrl": "https://leetcode.com",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+  },
+  {
+    "platform": "Coding Ninja",
+    "profileUrl": "https://www.naukri.com/code360/profile/zubair",
+    "imageUrl": "https://files.codingninjas.in/new-cn-logos-1-1711622387.svg"
   }
 ]
