@@ -1,0 +1,43 @@
+{
+  "name": "Mohd Zubair Ahmed",
+  "title": "Java Backend Developer & Automation Engineer",
+  "email": "Jubaira646@gmail.com",
+  "phone": "+91 9140077620",
+  "socials": [
+    { "label": "GitHub", "url": "https://github.com/Zubair7102" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/mohd-zubair-ahmed-a7a884255/" },
+    { "label": "Figma", "url": "https://www.figma.com/files/team/1303914623939848305/project/123945709?fuid=1160168960922013514" },
+    { "label": "LeetCode", "url": "https://leetcode.com" },
+    { "label": "Coding Ninja", "url": "https://www.naukri.com/code360/profile/zubair" }
+  ],
+  "education": {
+    "college": "Babu Banarasi Das Institute of Technology and Management",
+    "location": "Lucknow, Uttar Pradesh",
+    "degree": "Bachelor of Technology in Computer Science Engineering",
+    "duration": "2021 - 2025",
+    "coursework": ["Data Structures", "DBMS", "OOPs", "Operating Systems", "DAA"]
+  },
+  "experience": {
+    "role": "Software Engineer",
+    "company": "To The New",
+    "points": [
+      "Developed and maintained Java backend services using Spring Boot, RESTful APIs, and multithreading.",
+      "Managed builds, CI/CD pipelines, and version control workflows using Git.",
+      "Performed API testing with Postman, JUnit, and TestNG and validated performance with JMeter.",
+      "Automated UI testing with Selenium and integrated test suites with Jenkins.",
+      "Worked with Linux, Docker, and AWS (EC2, S3, Lambda) for deployment and scalability."
+    ]
+  },
+  "certificates": [
+    "TCS CodeVita Season 12 Round 2 | TCS",
+    "Oracle Cloud Infrastructure | Oracle",
+    "Full Stack Development | Infosys",
+    "Problem Solving | HackerRank",
+    "UI/UX Design | Internshala"
+  ],
+  "achievements": [
+    "Ranked 2625 in TCS CodeVita Season 12 Round 1 and 658 in Round 2.",
+    "Ranked 25,772 (94.97%) in Naukri Campus Young Turks Round 1 and secured 6,598 in Round 2 among 6 lakh participants."
+  ],
+  "publication": "A Generative Approach to Argument Structure Extraction | IJSREM, 2025"
+}

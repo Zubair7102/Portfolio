@@ -1,3 +1,22 @@
-<h1 align="center">Portfolio</h1>
+<h1 align="center">Portfolio Revamp - Java Backend + Automation Focus</h1>
 
-motivated Computer Science student with a strong foundation in ReactJS, UI/UX design, and full-stack development. I also have expertise in C++ and Data Structures & Algorithms, allowing me to create efficient, scalable solutions. I am passionate about creating seamless user experiences and web apps by combining technical skills with design, ensuring that each project is both functional and visually appealing. Committed to continuous learning, I am eager to apply my skills to solve real-world challenges and bring innovative ideas to life.
+Modern React + Tailwind portfolio tailored to a Java Backend Developer and Automation Engineer profile.
+
+## Sections
+- Hero with resume contact details and backend-focused introduction
+- Professional Summary and engineering focus cards
+- Experience + Education + Publication
+- Skill Matrix (backend, testing, cloud, tooling)
+- Resume-featured projects (Algorithm Visualizer, StudyNotion, Journal App)
+- Contact with professional links, certificates, and achievements
+
+## Run
+```bash
+npm install
+npm start
+```
+
+## Build
+```bash
+npm run build
+```

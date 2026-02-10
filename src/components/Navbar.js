@@ -1,121 +1,54 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import MZA from "../assets/Credential.png";
+import { FiMenu, FiX } from "react-icons/fi";
+import logo from "../assets/Credential.png";
+
+const navItems = ["home", "about", "experience", "skills", "projects", "contact"];
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const [shadow, setShadow] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-
-  const handleClick = useCallback(() => setNav(prev => !prev), []);
-
-  const navItems = ["home", "about", "skills", "projects", "contact"];
+  const [navOpen, setNavOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleShadow = () => {
-      setShadow(window.scrollY >= 90);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    window.addEventListener("scroll", handleShadow);
-
-    return () => {
-      window.removeEventListener("scroll", handleShadow);
-      observer.disconnect();
-    };
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const renderNavItem = useCallback((item) => (
-    <li key={item} className="ml-10">
-      <Link
-        to={item}
-        smooth={true}
-        duration={500}
-        className={`text-sm uppercase font-semibold tracking-wider transition-all duration-300 py-2 px-4 rounded-full ${
-          activeSection === item
-            ? "bg-cyan-500 text-[#0a192f]"
-            : "text-gray-300 hover:bg-cyan-500/20"
-        }`}
-      >
-        {item}
-      </Link>
-    </li>
-  ), [activeSection]);
+  const navLinkClass = "cursor-pointer rounded-full px-4 py-2 text-sm font-semibold uppercase tracking-wider text-gray-300 transition hover:bg-white/10 hover:text-white";
 
   return (
-    <nav className={`fixed w-full h-20 z-[100] ${shadow ? "bg-[#0a192f]/90 backdrop-blur-md" : "bg-[#0a192f]"} transition-all duration-300`}>
-      <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
-        <Link to="home" smooth={true} duration={500}>
-          <img src={MZA} alt="Logo" className="w-[50px] cursor-pointer hover:scale-105 transition-transform duration-300" />
+    <header className={`fixed inset-x-0 top-0 z-50 transition ${scrolled ? "bg-gray-900/80 backdrop-blur-xl" : "bg-transparent"}`}>
+      <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-6 md:px-10">
+        <Link to="home" smooth duration={500} className="cursor-pointer">
+          <img src={logo} alt="MZA logo" className="h-12 w-12 rounded-full border border-white/10" />
         </Link>
-        <div>
-          <ul className="hidden md:flex items-center">
-            {navItems.map(renderNavItem)}
-          </ul>
-          <button 
-            className="md:hidden focus:outline-none" 
-            onClick={handleClick}
-            aria-label="Toggle menu"
-          >
-            <div className="relative w-10 h-10 flex items-center justify-center">
-              <div className={`w-6 h-0.5 bg-cyan-500 transition-all duration-300 ${nav ? "rotate-45" : ""}`}></div>
-              <div className={`w-6 h-0.5 bg-cyan-500 absolute transition-all duration-300 ${nav ? "opacity-0" : "top-3"}`}></div>
-              <div className={`w-6 h-0.5 bg-cyan-500 transition-all duration-300 ${nav ? "-rotate-45" : ""}`}></div>
-            </div>
-          </button>
-        </div>
+
+        <ul className="hidden items-center gap-1 md:flex">
+          {navItems.map((item) => (
+            <li key={item} className="!px-0">
+              <Link to={item} smooth duration={500} className={navLinkClass}>{item}</Link>
+            </li>
+          ))}
+        </ul>
+
+        <button onClick={() => setNavOpen((prev) => !prev)} className="text-2xl text-gray-200 md:hidden" aria-label="Toggle navigation">
+          {navOpen ? <FiX /> : <FiMenu />}
+        </button>
       </div>
 
-      {/* Mobile Navigation */}
-      <div 
-        className={`md:hidden fixed left-0 top-0 w-full h-screen ${nav ? "bg-black/70" : "bg-transparent pointer-events-none"} transition-all duration-500`}
-        aria-hidden={!nav}
-      >
-        <div className={`fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-gradient-to-b from-[#0a192f] to-[#112240] p-10 ease-in duration-500 ${nav ? "translate-x-0" : "-translate-x-full"}`}>
-          <div>
-            <div className="flex w-full items-center justify-between mb-8">
-              <Link to="home" smooth={true} duration={500} onClick={handleClick}>
-                <img src={MZA} alt="Logo" className="w-[50px]" />
-              </Link>
-            </div>
-            <div className="border-b border-gray-300/20 my-4">
-              <p className="w-[85%] md:w-[90%] py-4 text-gray-300 italic">Let's build something legendary together</p>
-            </div>
-          </div>
-          <nav className="py-4 flex flex-col">
-            <ul className="uppercase">
-              {navItems.map((item) => (
-                <li key={item} className="py-4">
-                  <Link
-                    to={item}
-                    smooth={true}
-                    duration={500}
-                    onClick={handleClick}
-                    className={`text-lg font-semibold tracking-wider transition-all duration-300 ${
-                      activeSection === item ? "text-cyan-500" : "text-gray-300 hover:text-cyan-500"
-                    }`}
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+      {navOpen && (
+        <div className="border-t border-white/10 bg-gray-900/95 px-6 py-4 backdrop-blur-xl md:hidden">
+          <ul className="space-y-2">
+            {navItems.map((item) => (
+              <li key={item} className="!px-0">
+                <Link to={item} smooth duration={500} onClick={() => setNavOpen(false)} className="block cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-wider text-gray-300 transition hover:bg-white/10">{item}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </nav>
+      )}
+    </header>
   );
 };
 
