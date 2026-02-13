@@ -8,9 +8,10 @@ const Contact = () => {
       <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_1.2fr]">
         <div className="rounded-3xl border border-white/10 bg-gray-900/60 p-7">
           <p className="text-sm font-bold uppercase tracking-[0.24em] text-cyan-300">Contact</p>
-          <h2 className="mt-2 text-3xl font-bold text-white">Let&apos;s build something meaningful.</h2>
+          <h2 className="mt-2 text-3xl font-bold text-white">Let&apos;s talk backend &amp; automation.</h2>
           <p className="mt-4 text-gray-400">
-            I&apos;m currently available for internships, freelance work, and collaboration on exciting products.
+            I&apos;m open to roles and collaborations where I can design Java Spring Boot backends, automate testing, and help
+            ship reliable services with solid CI/CD.
           </p>
 
           <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2">

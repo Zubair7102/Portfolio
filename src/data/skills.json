@@ -58,5 +58,65 @@
   {
     "name": "WordPress",
     "imageUrl": "https://pngimg.com/d/wordpress_PNG43.png"
+  },
+  {
+    "name": "Java",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"
+  },
+  {
+    "name": "Spring Boot",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg"
+  },
+  {
+    "name": "ReactJS",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+  },
+  {
+    "name": "Material UI",
+    "imageUrl": "https://mui.com/static/logo.png"
+  },
+  {
+    "name": "Git",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg"
+  },
+  {
+    "name": "GitHub",
+    "imageUrl": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+  },
+  {
+    "name": "Postman",
+    "imageUrl": "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+  },
+  {
+    "name": "Jenkins",
+    "imageUrl": "https://www.jenkins.io/images/logos/jenkins/jenkins.png"
+  },
+  {
+    "name": "Docker",
+    "imageUrl": "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
+  },
+  {
+    "name": "Linux (Ubuntu)",
+    "imageUrl": "https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png"
+  },
+  {
+    "name": "Selenium",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Selenium_Logo.png"
+  },
+  {
+    "name": "JUnit",
+    "imageUrl": "https://junit.org/junit5/assets/img/junit5-logo.png"
+  },
+  {
+    "name": "TestNG",
+    "imageUrl": "https://testng.org/testng.png"
+  },
+  {
+    "name": "JMeter",
+    "imageUrl": "https://jmeter.apache.org/images/jmeter_square.png"
+  },
+  {
+    "name": "AWS",
+    "imageUrl": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"
   }
 ]

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
-import { FiDownload } from "react-icons/fi";
+import { FiDownload, FiServer, FiGitBranch } from "react-icons/fi";
+import { SiSpringboot, SiAwsamplify } from "react-icons/si";
 import zubair from "../assets/zubair1.jpg";
 import resume from "../data/resume.json";
 
@@ -10,7 +11,7 @@ const Home = () => {
   const [typedRole, setTypedRole] = useState("");
 
   const name = "Mohd Zubair Ahmed";
-  const role = "Full Stack Developer crafting polished digital products.";
+  const role = "Java Backend Developer & Automation Engineer building reliable services and platforms.";
 
   useEffect(() => {
     let isMounted = true;
@@ -43,7 +44,7 @@ const Home = () => {
       <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.4fr_1fr]">
         <div>
           <p className="mb-5 inline-flex rounded-full border border-cyan-300/40 bg-cyan-400/10 px-4 py-1 text-sm font-semibold tracking-wide text-cyan-200">
-            Open to internships & freelance collaborations
+            Software Engineer · Java Backend Developer &amp; Automation Engineer
           </p>
           <h1 className="text-4xl font-black leading-tight text-gray-100 sm:text-5xl lg:text-6xl">
             {typedName}
@@ -51,9 +52,39 @@ const Home = () => {
           </h1>
           <h2 className="mt-4 max-w-2xl text-lg text-gray-300 sm:text-2xl">{typedRole}</h2>
           <p className="mt-6 max-w-2xl leading-relaxed text-gray-400">
-            I build performant React experiences with strong UX thinking, clean architecture,
-            and scalable backend integrations.
+            I design and ship Java Spring Boot backends with clean REST APIs, strong testing practices, and CI/CD pipelines,
+            while staying comfortable across the stack whenever it makes the overall product better.
           </p>
+
+          <div className="mt-6 grid gap-3 text-xs text-gray-300 sm:grid-cols-3">
+            <div className="flex items-start gap-2 rounded-2xl border border-white/10 bg-gray-900/70 px-3 py-3">
+              <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-cyan-400/10 text-cyan-300">
+                <FiServer />
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan-200">Backend</p>
+                <p className="mt-1 text-[11px]">Java, Spring Boot, REST APIs, multithreading</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2 rounded-2xl border border-white/10 bg-gray-900/70 px-3 py-3">
+              <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-emerald-400/10 text-emerald-300">
+                <SiSpringboot />
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-200">Automation</p>
+                <p className="mt-1 text-[11px]">JUnit, TestNG, Selenium, Postman, JMeter</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2 rounded-2xl border border-white/10 bg-gray-900/70 px-3 py-3">
+              <div className="mt-0.5 flex h-7 w-7 items-center justify-center rounded-xl bg-indigo-400/10 text-indigo-300">
+                <FiGitBranch />
+              </div>
+              <div>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-indigo-200">DevOps &amp; Cloud</p>
+                <p className="mt-1 text-[11px]">Git, Jenkins, Docker, AWS (EC2, S3, Lambda)</p>
+              </div>
+            </div>
+          </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link to="projects" smooth duration={500}>

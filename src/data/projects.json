@@ -5,37 +5,72 @@
     "techStack": ["React", "JavaScript", "Tailwind CSS"],
     "highlights": [
       "Led a team of 2 and improved delivery efficiency by 20%, finishing two weeks early.",
-      "Built step-by-step sorting and searching visualizations with real-time algorithm comparisons.",
-      "Added playback speed controls to let learners customize visualization pace."
+      "Built step-by-step sorting and searching visualizations with real-time comparisons between algorithms.",
+      "Added playback controls to adjust visualization speed and replay runs for deeper understanding.",
+      "Let users configure array size, data distribution, and algorithm type to test different scenarios.",
+      "Used color-coding and live highlights to show comparisons, swaps, and key decision points."
     ],
     "codeUrl": "https://github.com/Zubair7102/Algo-Visualizer",
-    "demoUrl": "",
-    "backgroundImageUrl": "/randomMeme.png"
+    "demoUrl": "https://algo-visualizer-hazel.vercel.app/",
+    "backgroundImageUrl": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "name": "StudyNotion",
     "tagline": "Full-stack edtech platform with secure auth, course management, and payments",
     "techStack": ["Node.js", "Express.js", "MongoDB", "React.js", "Razorpay"],
     "highlights": [
-      "Implemented JWT + OTP authentication for secure login/signup flows.",
-      "Built instructor course management with multimedia sections and pricing.",
-      "Integrated Razorpay payments and optimized backend workflows to reduce load times by 30%."
+      "Implemented JWT + OTP-based authentication and secure password flows for students and instructors.",
+      "Designed a responsive, modern UI with personalized dashboards, search, wishlist, cart, and course detail pages.",
+      "Built instructor course management to create, update, and organize multimedia lessons and pricing.",
+      "Integrated Razorpay for smooth checkout and optimized backend workflows to reduce load times by ~30%.",
+      "Used Cloudinary for scalable media storage and Redux for robust client-side state management."
     ],
     "codeUrl": "https://github.com/Zubair7102/StudyNotion-Mjr",
-    "demoUrl": "",
-    "backgroundImageUrl": "/shopCart.png"
+    "demoUrl": "https://studynotion-frontend.vercel.app/",
+    "backgroundImageUrl": "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
   },
   {
     "name": "Journal App",
     "tagline": "Production-style Spring Boot backend with auth, caching, analytics, and cloud deployment",
     "techStack": ["Spring Boot", "MongoDB", "Redis", "Docker", "Google OAuth"],
     "highlights": [
-      "Built role-based journaling APIs with JWT auth, OAuth login, and Swagger documentation.",
-      "Integrated sentiment analysis and weather-based greetings with Redis caching.",
-      "Containerized with Docker and deployed with MongoDB Atlas for scalable cloud readiness."
+      "Built secure journaling APIs with JWT auth, role-based access control, and Google OAuth login.",
+      "Implemented sentiment analysis and weather-based greetings with Redis caching for fast responses.",
+      "Exposed comprehensive Swagger/OpenAPI docs for all public, user, journal, and admin endpoints.",
+      "Scheduled background jobs for weekly sentiment email reports and cache refresh operations.",
+      "Containerized the backend with Docker and wired it for MongoDB Atlas and Redis in cloud environments."
     ],
     "codeUrl": "https://github.com/Zubair7102/Journal-App",
     "demoUrl": "",
-    "backgroundImageUrl": "/newsExpress.png"
+    "backgroundImageUrl": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "name": "Live Location Tracker",
+    "tagline": "Real-time geolocation tracking dashboard using WebSockets and interactive maps",
+    "techStack": ["Node.js", "Express.js", "Socket.io", "React.js", "Leaflet.js"],
+    "highlights": [
+      "Streams user geolocation updates over Socket.io and renders them on an interactive Leaflet.js map.",
+      "Built a real-time dashboard for tracking multiple users simultaneously with smooth marker animations.",
+      "Handled disconnects, reconnections, and stale sessions to keep the map state consistent.",
+      "Structured the backend to be extensible for alerts, geofencing, and historical replay features."
+    ],
+    "codeUrl": "https://github.com/Zubair7102",
+    "demoUrl": "",
+    "backgroundImageUrl": "https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "name": "Briefly-Legal",
+    "tagline": "AI-powered legal document analysis with NLP and machine learning",
+    "techStack": ["Next.js", "TypeScript", "Flask", "Python", "PyTorch", "TextBlob", "Docker"],
+    "highlights": [
+      "Automates legal document review by extracting key clauses, risks, and insights from contracts.",
+      "Uses reading-comprehension models trained on SQuAD and CUAD datasets to answer questions on top of uploaded agreements.",
+      "Includes a T5-based paraphrasing model to rewrite complex legal language into clearer summaries.",
+      "Runs sentiment analysis with TextBlob to flag potentially risky or unfavorable clauses.",
+      "Connects a Next.js frontend to Flask ML services and ships with Docker Compose for one-command local deployment."
+    ],
+    "codeUrl": "https://github.com/Zubair7102/Briefly-Legal",
+    "demoUrl": "",
+    "backgroundImageUrl": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80"
   }
 ]
