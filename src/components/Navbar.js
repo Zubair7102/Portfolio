@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../assets/Credential.png";
 
-const navItems = ["home", "about", "experience", "skills", "projects", "contact"];
+const navItems = ["home", "about", "skills", "projects", "contact"];
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -24,10 +24,12 @@ const Navbar = () => {
           <img src={logo} alt="MZA logo" className="h-12 w-12 rounded-full border border-white/10" />
         </Link>
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-2 md:flex">
           {navItems.map((item) => (
             <li key={item} className="!px-0">
-              <Link to={item} smooth duration={500} className={navLinkClass}>{item}</Link>
+              <Link to={item} smooth duration={500} className={navLinkClass}>
+                {item}
+              </Link>
             </li>
           ))}
         </ul>
@@ -42,7 +44,15 @@ const Navbar = () => {
           <ul className="space-y-2">
             {navItems.map((item) => (
               <li key={item} className="!px-0">
-                <Link to={item} smooth duration={500} onClick={() => setNavOpen(false)} className="block cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-wider text-gray-300 transition hover:bg-white/10">{item}</Link>
+                <Link
+                  to={item}
+                  smooth
+                  duration={500}
+                  onClick={() => setNavOpen(false)}
+                  className="block cursor-pointer rounded-lg px-4 py-3 text-sm font-semibold uppercase tracking-wider text-gray-300 transition hover:bg-white/10"
+                >
+                  {item}
+                </Link>
               </li>
             ))}
           </ul>

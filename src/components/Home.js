@@ -1,33 +1,64 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
-import { FiDownload, FiMail, FiPhone } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 import zubair from "../assets/zubair1.jpg";
 import resume from "../data/resume.json";
 
 const Home = () => {
+  const [typedName, setTypedName] = useState("");
+  const [typedRole, setTypedRole] = useState("");
+
+  const name = "Mohd Zubair Ahmed";
+  const role = "Full Stack Developer crafting polished digital products.";
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const typeLine = async (text, setter, delay) => {
+      for (let i = 0; i <= text.length; i += 1) {
+        if (!isMounted) {
+          return;
+        }
+        setter(text.slice(0, i));
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((resolve) => setTimeout(resolve, delay));
+      }
+    };
+
+    const startTyping = async () => {
+      await typeLine(name, setTypedName, 70);
+      await typeLine(role, setTypedRole, 32);
+    };
+
+    startTyping();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
     <section id="home" name="home" className="relative flex min-h-screen items-center px-6 pb-16 pt-32 md:px-12">
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.35fr_1fr]">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.4fr_1fr]">
         <div>
           <p className="mb-5 inline-flex rounded-full border border-cyan-300/40 bg-cyan-400/10 px-4 py-1 text-sm font-semibold tracking-wide text-cyan-200">
-            {resume.title}
+            Open to internships & freelance collaborations
           </p>
-          <h1 className="text-4xl font-black leading-tight text-gray-100 sm:text-5xl lg:text-6xl">{resume.name}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-gray-300 sm:text-xl">
-            Backend-focused engineer with hands-on experience in Spring Boot APIs, CI/CD, automation
-            testing, Dockerized deployments, and scalable cloud workflows.
+          <h1 className="text-4xl font-black leading-tight text-gray-100 sm:text-5xl lg:text-6xl">
+            {typedName}
+            <span className="ml-1 inline-block h-10 w-[3px] animate-pulse bg-cyan-300 align-middle" />
+          </h1>
+          <h2 className="mt-4 max-w-2xl text-lg text-gray-300 sm:text-2xl">{typedRole}</h2>
+          <p className="mt-6 max-w-2xl leading-relaxed text-gray-400">
+            I build performant React experiences with strong UX thinking, clean architecture,
+            and scalable backend integrations.
           </p>
-
-          <div className="mt-5 flex flex-wrap gap-4 text-sm text-gray-300">
-            <a href={`mailto:${resume.email}`} className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-gray-900/60 px-3 py-2"><FiMail /> {resume.email}</a>
-            <a href={`tel:${resume.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-gray-900/60 px-3 py-2"><FiPhone /> {resume.phone}</a>
-          </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Link to="projects" smooth duration={500}>
               <button className="group inline-flex items-center gap-3 rounded-xl border border-cyan-300/70 bg-cyan-400/10 px-6 py-3 font-semibold text-cyan-100 transition hover:-translate-y-1 hover:bg-cyan-400/20">
-                View Major Projects
+                Explore Projects
                 <HiArrowNarrowRight className="text-lg transition group-hover:translate-x-1" />
               </button>
             </Link>
