@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { FiDownload, FiServer, FiGitBranch } from "react-icons/fi";
-import { SiSpringboot, SiAwsamplify } from "react-icons/si";
+import { SiSpringboot } from "react-icons/si";
 import zubair from "../assets/zubair1.jpg";
-import resume from "../data/resume.json";
 
 const Home = () => {
   const [typedName, setTypedName] = useState("");

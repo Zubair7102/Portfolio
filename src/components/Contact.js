@@ -1,6 +1,5 @@
 import React from "react";
 import links from "../data/links.json";
-import resume from "../data/resume.json";
 
 const Contact = () => {
   return (
