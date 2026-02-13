@@ -1,6 +1,7 @@
 import React from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
@@ -14,6 +15,7 @@ const App = () => {
       <main className="relative z-10">
         <Home />
         <About />
+        <Experience />
         <Skills />
         <Projects />
         <Contact />

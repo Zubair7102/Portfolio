@@ -1,5 +1,13 @@
 import React from "react";
-import skills from "../data/skills.json";
+
+const groupedSkills = [
+  { title: "Programming Languages", items: ["Java", "C++", "JavaScript", "HTML", "CSS"] },
+  { title: "Frameworks", items: ["Spring Boot", "ReactJS", "ExpressJS", "NodeJS", "Tailwind CSS", "Material UI"] },
+  { title: "Databases", items: ["MySQL", "MongoDB", "Redis"] },
+  { title: "Testing & Automation", items: ["Selenium", "Postman", "JUnit", "TestNG", "JMeter"] },
+  { title: "DevOps & Cloud", items: ["Git", "GitHub", "Docker", "Jenkins", "AWS (EC2, S3, Lambda)"] },
+  { title: "Design & Tools", items: ["Figma", "Firebase", "Linux (Ubuntu)"] }
+];
 
 const Skills = () => {
   return (
