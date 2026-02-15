@@ -1,6 +1,6 @@
 import React from "react";
 import { SiCanva } from "react-icons/si";
-import { FaProjectDiagram } from "react-icons/fa";
+import { FaProjectDiagram, FaCheckCircle } from "react-icons/fa";
 import skills from "../data/skills.json";
 
 const Skills = () => {
@@ -29,6 +29,7 @@ const Skills = () => {
           {skills.map((skill) => {
             const isCanva = skill.name.toLowerCase() === "canva";
             const isDsa = skill.name.toLowerCase() === "dsa";
+            const isTestng = skill.name.toLowerCase() === "testng";
 
             return (
               <article
@@ -43,6 +44,8 @@ const Skills = () => {
                     <SiCanva className="relative h-10 w-10 text-[#00C4CC]" aria-hidden />
                   ) : isDsa ? (
                     <FaProjectDiagram className="relative h-10 w-10 text-amber-400" aria-hidden />
+                  ) : isTestng ? (
+                    <FaCheckCircle className="relative h-10 w-10 text-emerald-400" aria-hidden />
                   ) : (
                     <img
                       src={skill.imageUrl}
