@@ -39,22 +39,17 @@ const Skills = () => {
 
                 <div className="relative mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 ring-1 ring-white/10">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 to-fuchsia-400/10 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
-                  <img
-                    src={skill.imageUrl}
-                    className="relative h-10 w-10 rounded-lg object-contain"
-                    alt={skill.name}
-                    loading="lazy"
-                  />
-
-                  {isCanva && (
-                    <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-cyan-300 ring-2 ring-slate-900">
-                      <SiCanva className="text-sm" />
-                    </span>
-                  )}
-                  {isDsa && (
-                    <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-slate-900 text-amber-300 ring-2 ring-slate-900">
-                      <FaProjectDiagram className="text-sm" />
-                    </span>
+                  {isCanva ? (
+                    <SiCanva className="relative h-10 w-10 text-[#00C4CC]" aria-hidden />
+                  ) : isDsa ? (
+                    <FaProjectDiagram className="relative h-10 w-10 text-amber-400" aria-hidden />
+                  ) : (
+                    <img
+                      src={skill.imageUrl}
+                      className="relative h-10 w-10 rounded-lg object-contain"
+                      alt={skill.name}
+                      loading="lazy"
+                    />
                   )}
                 </div>
 
